@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("archivos", archivo);
 
     try {
-      const response = await fetch("http://localhost:8000/api/archivos/carga-masiva/", {
+      const response = await fetch("/api/archivos/carga-masiva/", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function cargarColumnas() {
     try {
-      let url = "http://localhost:8000/api/archivos/columnas-disponibles/";
+      let url = "/api/archivos/columnas-disponibles/";
       if (archivoId) {
         url += `?archivo_id=${archivoId}`;
       }
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Payload enviado:", payload);
 
     try {
-      const res = await fetch("http://localhost:8000/api/archivos/generar-grafico/", {
+      const res = await fetch("/api/archivos/generar-grafico/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

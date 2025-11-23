@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tablaCuerpo = document.querySelector(".archivos");
 
-  fetch("http://localhost:8000/api/archivos/archivos/")
+  fetch("/api/archivos/archivos/")
     .then(response => response.json())
     .then(data => {
       console.log("Respuesta recibida:", data);

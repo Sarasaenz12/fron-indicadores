@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    fetch("http://localhost:8000/api/archivos/archivos/", {
+    fetch("/api/archivos/archivos/", {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
