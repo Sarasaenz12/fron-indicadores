@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    fetch("/api/archivos/archivos/", {
+    fetch("https://back-indicadores-1.onrender.com/api/archivos/archivos/", {
       headers: {
         "Authorization": `Bearer ${token}`,
       },

@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const url = editandoId
-      ? `/api/auth/users/${editandoId}/`
-      : "h/api/auth/users/create/";
+      ? `https://back-indicadores-1.onrender.com/api/auth/users/${editandoId}/`
+      : "https://back-indicadores-1.onrender.com/api/auth/users/create/";
 
     const method = editandoId ? "PUT" : "POST";
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   async function cargarFuncionarios() {
-    const res = await fetch("/api/auth/users/", {
+    const res = await fetch("https://back-indicadores-1.onrender.com/api/auth/users/", {
       headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!result.isConfirmed) return;
 
-    const res = await fetch(`/api/auth/users/${id}/`, {
+    const res = await fetch(`https://back-indicadores-1.onrender.com/api/auth/users/${id}/`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.editarFuncionario = async function (id) {
-    const res = await fetch(`/api/auth/users/${id}/`, {
+    const res = await fetch(`https://back-indicadores-1.onrender.com/api/auth/users/${id}/`, {
       headers: {
         Authorization: `Bearer ${token}`
       }

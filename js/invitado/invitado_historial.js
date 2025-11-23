@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tablaCuerpo = document.querySelector(".archivos");
 
-  fetch("/api/archivos/archivos/")
+  fetch("https://back-indicadores-1.onrender.com/api/archivos/archivos/")
     .then(response => response.json())
     .then(data => {
       console.log("Respuesta recibida:", data);
