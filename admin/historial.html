@@ -2,11 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Crear Funcionario</title>
+  <title>Historial - Administrador</title>
   <link rel="stylesheet" href="../css/sidebar.css">
   <link rel="stylesheet" href="../css/invitado.css">
   <link rel="shortcut icon" href="../logo/logo_alcaldia.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .btn-eliminar {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-eliminar:hover {
+      background-color: #c82333;
+    }
+
+    .btn-eliminar:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    .acciones-columna {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -16,7 +42,7 @@
         <div class="sidebar-avatar">
           <img src="avatar_admin.png" class="avatar-admin" alt="">
         </div>
-        <div class="sidebar-title">Panel Administror</div>
+        <div class="sidebar-title">Panel Administrador</div>
         <div class="sidebar-subtitle">Sistema de indicadores</div>
       </div>
 
@@ -78,8 +104,8 @@
 <main class="main-container">
     <header class="header-main">
     <div class="title-main">
-      <h1 class="title">Historial</h1>
-        <h3>Seleccione un archivo</h3>
+      <h1 class="title">Historial de Archivos</h1>
+      <h3>Administra los archivos del sistema</h3>
     </div>
 </header>
 
@@ -89,7 +115,8 @@
       <thead class="data">
         <tr class="title-data">
           <th class="encabezado">Nombre del archivo</th>
-          <th class="encabezado">fecha</th>
+          <th class="encabezado">Fecha</th>
+          <th class="encabezado acciones-columna">Acciones</th>
         </tr>
       </thead>
       <tbody class="archivos">
